@@ -6,11 +6,11 @@ var app = express();
 app.use(morgan('combined'));
 <html>
  var ArticleOne= {
-  title:`Article one| jegatheshwaran1',
+  title:`Article one jegatheshwaran1',
   heading:`Article one',
   Date:'22 Aug 2017',
-  content:'  
-     <p>
+  content: 
+   `  <p>
     very irritated noida. no genuine person in the world, All are very well selfiesssss 
     Someone is there with me they are not humans;
     </p>
@@ -22,9 +22,7 @@ app.use(morgan('combined'));
           </p>'
              };
 
-
-
-function createTemplate(Data)
+function createTemplate (Data)
 {
 var title=data.title:
 var date= data.date:
