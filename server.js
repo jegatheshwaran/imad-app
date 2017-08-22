@@ -3,21 +3,21 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
-app.use(morgan('combined'));<html>
-var ArticleOne={
+app.use(morgan('combined'));
+<html>
+ var Article-One={
   title:'Article one| jegatheshwaran',
   heading:'Article one',
   Date:'22 Aug 2017',
   content:'  
      <p>
     very irritated noida. no genuine person in the world, All are very well selfiesssss 
-    Someone is there with me they are not humans 
-   
+    Someone is there with me they are not humans;
     </p>
    
           <p>
      whose who are cheating others and who cann't care about others, they are respected by world.
-     who are genuine they are mental in the world
+     who are genuine they are mental in the world;
      
           </p>'
              };
