@@ -33,50 +33,28 @@ var content=data.content:
 
 var htmlTemplate='
 <html>
-
 <head>
-    
 <title>
        hi i'm jegatheshwaran: madurai: tamilnadu
-   
  </title>
-   
  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
   <link href="/ui/style.css" rel="stylesheet" />
-   
- <style>
-    
-   
- </style>
 <body>
-   
  <div class="container">
-        
 <o hr='/'>Home</o>
-    
 </div>    
- 
    <hr/>
-   
  <h3>
-  
   $(Heading)         
 </h3>
- 
  $(Date) 
 <div>
- 
  $(content)   
 <</div>
-
 </body>   
- 
 </html>
-
 ':
 return htmltemplate;
-
 }
 
 app.get('/', function (req, res) {
