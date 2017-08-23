@@ -5,7 +5,8 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
-var Articleone={
+var articles={
+Articleone={
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article one`,
     date: `22 aug',
@@ -21,7 +22,38 @@ var Articleone={
      <p>
      this is article one
      </p>
-};
+},
+Articletwo={ title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
+    heading: `Article two`,
+    date: `22 aug',
+    content:`
+    <p>
+    very irritated noida. no genuine person in the world, All are very well selfiesssss 
+    Someone is there with me  they are not humans 
+   </p>
+    <p>
+     whose who are cheating others and who cann't care about others, they are respected by world.
+     who are genuine they are mental in the world
+     </p>
+     <p>
+     this is article one
+     </p>
+     },
+articlethree={ title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
+    heading: `Article three`,
+    date: `22 aug',
+    content:`
+    <p>
+    very irritated noida. no genuine person in the world, All are very well selfiesssss 
+    Someone is there with me  they are not humans 
+   </p>
+    <p>
+     whose who are cheating others and who cann't care about others, they are respected by world.
+     who are genuine they are mental in the world
+     </p>
+     <p>
+     this is article one
+     </p>},
 
 
 
