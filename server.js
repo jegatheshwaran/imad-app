@@ -2,6 +2,54 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var app=express();
+app.use(morgan('combined'));
+
+var Articleone={
+    title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
+    heading: `Article one`,
+    date: `22 aug',
+    content:`
+    <p>
+    very irritated noida. no genuine person in the world, All are very well selfiesssss 
+    Someone is there with me they are not humans 
+ </p>
+ 
+ <p>
+     whose who are cheating others and who cann't care about others, they are respected by world.
+     who are genuine they are mental in the world
+     </p>
+     <p>
+     this is article one
+     </p>`
+};
+
+var htmltemplate=<html>
+<head>
+    <title>
+       hi i'm jegatheshwaran: madurai: tamilnadu
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link href="/ui/style.css" rel="stylesheet" />
+</head>     
+<body>
+    <div class="container">
+    <div>
+        <o hr='/'>Home</o>
+    </div>    
+<hr/>
+<h3>
+   ${title}
+</h3>
+<div>
+   ${date}
+</div>
+<div>
+${content}
+</div>
+</div>
+</body>    
+</html>;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
