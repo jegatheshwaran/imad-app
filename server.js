@@ -5,7 +5,7 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
-var Articleone={
+var Articleone={''
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article one`,
     date: `22 aug',
@@ -21,13 +21,13 @@ var Articleone={
      </p>
      <p>
      this is article one
-     </p>`
+     </p>
 };
 
 var htmltemplate=<html>
 <head>
     <title>
-       hi i'm jegatheshwaran: madurai: tamilnadu
+       hi ${title}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
      <link href="/ui/style.css" rel="stylesheet" />
@@ -39,7 +39,7 @@ var htmltemplate=<html>
     </div>    
 <hr/>
 <h3>
-   ${title}
+   ${heading}
 </h3>
 <div>
    ${date}
