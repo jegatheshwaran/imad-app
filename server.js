@@ -12,12 +12,10 @@ Articleone={
     date: `22 aug',
     content:`
     <p>
-    `very irritated noida. no genuine person in the world, All are very well selfiesssss 
-    Someone is there with me  they are not humans '
+    `i need to improve my skills '
    </p>
     <p>
-     whose who are cheating others and who cann't care about others, they are respected by world.
-     who are genuine they are mental in the world
+    i need to improve my skills
      </p>
      <p>
      this is article one
@@ -29,12 +27,10 @@ Articletwo={
     date: `22 aug',
     content:`
     <p>
-    `very irritated noida. no genuine person in the world, All are very well selfiesssss 
-    Someone is there with me  they are not humans '
+    `i need to improve my skills '
    </p>
     <p>
-     whose who are cheating others and who cann't care about others, they are respected by world.
-     who are genuine they are mental in the world
+    i need to improve my skills
      </p>
      <p>
      this is article two
@@ -46,12 +42,10 @@ articlethree={
     date: `22 aug',
     content:`
     <p>
-    `very irritated noida. no genuine person in the world, All are very well selfiesssss 
-    Someone is there with me  they are not humans '
+    `i need to improve my skills '
    </p>
     <p>
-     whose who are cheating others and who cann't care about others, they are respected by world.
-     who are genuine they are mental in the world
+     i need to improve my skills
      </p>
      <p>
      this is article three
