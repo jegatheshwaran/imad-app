@@ -93,17 +93,12 @@ app.get('/', function (req, res) {
 
 app.get('/Article-one', function (req, res) {
     //articleone ==article-one
-    //article[articlename]={}
+    //article[articlename]={} content for article one
+    var articlename=req.params.articlename;
     res.send(createTemplate(articles[articlename]));
 });
 
-app.get('/Article-two', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
 
-app.get('/Article-three', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
