@@ -39,7 +39,7 @@ var articles=
 },
 `article-three`=
 {
-     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
+  title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article three`,
     date: '22 aug',
     content:
@@ -55,13 +55,13 @@ var articles=
 }
 };
 
-
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmlTemplate=<html>
+var htmlTemplate=
+<html>
 <head>
     <title>
         ${title}
@@ -85,7 +85,7 @@ var htmlTemplate=<html>
 ${content}
 </div>
 </body>    
-</html>;
+</html>
 return htmlTempalte;
 }
 
@@ -93,7 +93,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Article-one', function (req, res) {
+app.get(`/Article-one`, function (req, res) {
     //articleone ==article-one
     //article[articlename]={} content for article one
     var articlename=req.params.articlename;
