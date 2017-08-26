@@ -9,10 +9,10 @@ var articles={
 `Article-one`={
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article one`,
-    date: `22 aug',
+    date: `22 aug`,
     content:`
     <p>
-    `i need to improve my skills '
+    i need to improve my skills
    </p>
     <p>
     i need to improve my skills
@@ -27,7 +27,7 @@ var articles={
     date: `22 aug',
     content:`
     <p>
-    `i need to improve my skills '
+    i need to improve my skills 
    </p>
     <p>
     i need to improve my skills
@@ -40,10 +40,10 @@ var articles={
 {
      title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article three`,
-    date: `22 aug',
+    date: '22 aug',
     content:`
     <p>
-    `i need to improve my skills '
+    i need to improve my skills 
    </p>
     <p>
      i need to improve my skills
