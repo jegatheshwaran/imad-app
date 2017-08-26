@@ -5,12 +5,13 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
-var articles={
+var articles=
+{
 `Article-one`={
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article one`,
     date: `22 aug`,
-    content:`
+    content:
     <p>
     i need to improve my skills
    </p>
@@ -19,13 +20,13 @@ var articles={
      </p>
      <p>
      this is article one
-     </p>`
+     </p>
 },
 `Article-two`={
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article two`,
     date: `22 aug`,
-    content:`
+    content:
     <p>
     i need to improve my skills
    </p>
@@ -34,14 +35,14 @@ var articles={
      </p>
      <p>
      this is article two
-     </p>`
+     </p>
 },
 `article-three`=
 {
      title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article three`,
     date: '22 aug',
-    content:`
+    content:
     <p>
     i need to improve my skills 
    </p>
@@ -50,8 +51,8 @@ var articles={
      </p>
      <p>
      this is article three
-     </p>'
-},
+     </p>
+}
 };
 
 
