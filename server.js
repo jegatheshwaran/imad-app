@@ -22,12 +22,12 @@ var articles={
      </p>`
 },
 `Article-two`={
-      title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
+    title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article two`,
-    date: `22 aug',
+    date: `22 aug`,
     content:`
     <p>
-    i need to improve my skills 
+    i need to improve my skills
    </p>
     <p>
     i need to improve my skills
@@ -35,7 +35,7 @@ var articles={
      <p>
      this is article two
      </p>`
-     },
+},
 `article-three`=
 {
      title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
