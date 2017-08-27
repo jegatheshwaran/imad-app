@@ -10,7 +10,7 @@ var articles=
 Article-one:{
     title:'hi i'm jegatheshwaran: madurai: tamilnadu' ,
     heading: 'Article one',
-    date: '22 aug',
+    date: '20 aug',
     content:
     `<p>
     i need to improve my skills
@@ -94,7 +94,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get(`/Article-one`, function (req, res) {
+app.get('/Article-one', function (req, res) {
     //articleone ==article-one
     //article[articlename]={} content for article one
     var articlename=req.params.articlename;
