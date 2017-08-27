@@ -8,9 +8,9 @@ app.use(morgan('combined'));
 var articles=
 {
 Article-one:{
-    title:'hi i am jegatheshwaran madurai tamilnadu' ,
+    title: 'hi i am jegatheshwaran madurai tamilnadu',
     heading: 'Article one',
-    date: '20 aug',
+    date: '22 aug',
     content:
     `<p>
     i need to improve my skills
