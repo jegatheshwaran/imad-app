@@ -94,7 +94,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Article-one', function (req, res) {
+app.get('/Articleone', function (req, res) {
     //articleone ==article-one
     //article[articlename]={} content for article one
     var articlename=req.params.articlename;
