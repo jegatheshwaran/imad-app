@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles=
 {
- Articleone:{
+ Article-one:{
     title: 'hi i am jegatheshwaran madurai tamilnadu',
     heading: 'Article one',
     date: '22 aug',
@@ -22,7 +22,7 @@ var articles=
      this is article one
      </p>`
 },
-Articletwo:{
+Article-two:{
     title: 'hi i am jegatheshwaran madurai tamilnadu',
     heading: 'Article two',
     date: '22 aug',
@@ -37,7 +37,7 @@ Articletwo:{
      this is article two
      </p>`
 },
-articlethree:{
+article-three:{
   title: 'hi i am jegatheshwaran madurai tamilnadu',
     heading: 'article three',
     date: '22 aug',
@@ -94,7 +94,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Articleone', function (req, res) {
+app.get('/Article-one', function (req, res) {
     //articleone ==article-one
     //article[articlename]={} content for article one
     var articlename=req.params.articlename;
