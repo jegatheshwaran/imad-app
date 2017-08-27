@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 var articles=
 
-`Article-one`={
-    title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
+"Article-one"={
+    title:` hi i'm jegatheshwaran: madurai: tamilnadu `,
     heading: `Article one`,
     date: `22 aug`,
     content:
@@ -22,7 +22,7 @@ var articles=
      this is article one
      </p>`
 };
-`Article-two`={
+"Article-two"={
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article two`,
     date: `22 aug`,
@@ -37,7 +37,7 @@ var articles=
      this is article two
      </p>`
 };
-`article-three`={
+"article-three"={
   title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article three`,
     date: '22 aug',
