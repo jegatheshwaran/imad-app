@@ -6,7 +6,7 @@ var app=express();
 app.use(morgan('combined'));
 
 var articles={
-{
+
 `Article-one`={
     title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
     heading: `Article one`,
