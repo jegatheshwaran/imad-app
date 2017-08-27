@@ -6,11 +6,11 @@ var app=express();
 app.use(morgan('combined'));
 
 var articles=
-
-"Article-one"={
-    title:" hi i'm jegatheshwaran: madurai: tamilnadu ",
-    heading: "Article one",
-    date: `22 aug`,
+{
+Article-one:{
+    title:'hi i'm jegatheshwaran: madurai: tamilnadu' ,
+    heading: 'Article one',
+    date: '22 aug',
     content:
     `<p>
     i need to improve my skills
@@ -21,11 +21,11 @@ var articles=
      <p>
      this is article one
      </p>`
-};
-"Article-two"={
-    title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
-    heading: `Article two`,
-    date: `22 aug`,
+},
+Article-two:{
+    title: 'hi i'm jegatheshwaran: madurai: tamilnadu',
+    heading: 'Article two',
+    date: '22 aug',
     content:
     `<p>
     i need to improve my skills
@@ -36,10 +36,10 @@ var articles=
      <p>
      this is article two
      </p>`
-};
-"article-three"={
-  title: `hi i'm jegatheshwaran: madurai: tamilnadu`,
-    heading: `Article three`,
+},
+article-three:{
+  title: 'hi i'm jegatheshwaran: madurai: tamilnadu',
+    heading: 'article three',
     date: '22 aug',
     content:
     `<p>
@@ -50,7 +50,8 @@ var articles=
      </p>
      <p>
      this is article three
-     </p>`}:
+     </p>`
+},
 };
 
 function createTemplate(data){
@@ -84,7 +85,8 @@ ${content}
 </div>
 </div>
 </body>    
-</html>
+</html>`;
+
 return htmlTempalte;
 }
 
