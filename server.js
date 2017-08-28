@@ -87,7 +87,7 @@ ${content}
 </body>    
 </html>`;
 
-return htmlTempalte;
+'return htmlTempalte';
 }
 
 app.get('/', function (req, res) {
