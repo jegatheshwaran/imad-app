@@ -10,7 +10,7 @@ var articles=
  'Article-one':{
     title: 'hi i am jegatheshwaran madurai tamilnadu',
     heading: 'Article one',
-    date: '22 aug',
+    date: '10 aug',
     content:
     `<p>
     i need to improve my skills
@@ -25,7 +25,7 @@ var articles=
 'Article-two':{
     title: 'hi i am jegatheshwaran madurai tamilnadu',
     heading: 'Article two',
-    date: '22 aug',
+    date: '28 aug',
     content:
     `<p>
     i need to improve my skills
