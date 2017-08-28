@@ -6,7 +6,7 @@ var element=document.getElementById('main-text');
 element.innerText='New Born';
 
  //move the image
- var img=document.getElementbtId('madi');
+ var img=document.getElementId('madi');
  var marginLeft=0;
  function moveRight () {
      marginLeft =marginLeft + 10;
