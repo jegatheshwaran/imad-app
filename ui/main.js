@@ -14,9 +14,6 @@ element.innerText='New Born';
  }
  img.onclick= function(){
      var interval=setinterval (moveRight, 50);
-    
-    
-     
  };
  
  
