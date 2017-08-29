@@ -13,7 +13,7 @@ element.innerText='New Born';
      img.style.marginLeft =marginLeft + 'px';
  }
  img.onclick = function () {
-     var interval=setinterval (moveRight, 50);
+     var interval= setinterval (moveRight, 50);
  };
  
  
