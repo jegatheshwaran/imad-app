@@ -13,7 +13,7 @@
          if (request.status === 200){
              var counter = request.responeText;
              var span = document.getElementById('counter');
-             span.innerXML = counter.tostring();
+             span.innerHTML = counter.tostring();
          
          }
        }
