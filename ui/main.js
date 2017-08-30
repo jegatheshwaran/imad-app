@@ -1,22 +1,28 @@
 //counter code
  var button = document.getElemntById('counter');
- var counter = 0;
  
  button.onclick = function(){
+     
+   //create a request object
+   var request = new xmlHttpRequest();
    
-   //make request to counter endpoint
-   var  request = new XMLHttprequest();
+    //capture the respone and store is in variable
+   request.onReadystatechange =function(){
+       if (request.readystate === XMLhttpRequest.DONE){
+        //take some action 
+         if (request.status === 200){
+             var counter = request.responeText;
+             var span = document.getElementById('counter');
+             span.innerHTML = counter.tostring();
+         
+         }
+       }
+       // no done yet
+   };
    
-   //capture the respone and store is in variable
-   request.oneReadystatechange =function(){
-       if (request.readystate === XMLhttpRequest
-   }
-   
-   
-   
-   //render the variable in correct span
-   counter = counter + 1;
-   var span = document.getElementById('counter');
-   span.innerHTML= counter.tostring();
+   //make the request
+   request.open('GET','http://jegatheshwaran36.imad.hasura-app.io/counter',true);
+   request.send(null);
  };
+   
  
