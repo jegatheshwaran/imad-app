@@ -21,7 +21,7 @@
    };
    
    //make the request
-   request.open('GET','http://jegatheshwaran36.imad.hasura-app.io/counter',true);
+   request.open('GET', 'http://jegatheshwaran36.imad.hasura-app.io/counter',true);
    request.send(null);
  };
    
