@@ -10,7 +10,7 @@
    //capture the respone and store is in variable
    request.oneReadystatechange =function(){
        if (request.readystate === XMLhttpRequest
-   }
+   };
    
    
    
