@@ -23,6 +23,8 @@
    //make the request
    request.open('GET', 'http://jegatheshwaran36.imad.hasura-app.io/counter',true);
    request.send(null);
+ };
+ 
    //submit name
     var nameinput= document.getElementById('name');
     var name = nameinput.value;
