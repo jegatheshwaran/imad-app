@@ -123,7 +123,7 @@ app.get('/submit-names/:name',function (req,res){
     //URL: /submit-name?name=xxxx
     //get the name from request
     var name = req.query.name;
-   var name=req.query.name;
+   
    
 });  
 
