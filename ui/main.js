@@ -52,7 +52,7 @@ submit.onclick = function(){
     //console.log(password);
 
     //Make a request to the counter. use below if running on hasura-app
-    //request.open('GET', 'http://jegatheshwaran36.imad.hasura-app.io/submit-comment?comment=' + comment, true);
+    //request.open('GET', "http://jegatheshwaran36.imad.hasura-app.io/submit-comment?comment="" + comment, true);
 
     //Make a request, use below if running on localhost
     request.open('POST', 'http://../login', true);
