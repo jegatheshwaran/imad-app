@@ -2,6 +2,7 @@
  var button = document.getElementById('counter');
  
  button.onclick = function(){
+     var request = new XMLHttpRequest();
      
   //create the response and store it in a vaeiable
   request.onreadystatechange=function(){
@@ -18,7 +19,7 @@
        // no done yet
   };
  //make the request
-   request.open('GET', 'http://jegatheshwaran36.imad.hasura-app.io/counter',true);
+   request.open('GET', "http://jegatheshwaran36.imad.hasura-app.io/counter",true);
    request.send(null); 
    };
  
