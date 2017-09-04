@@ -25,6 +25,8 @@
  
 
 //Submit username and password
+var NamesInput = document.getElementById('names');
+var Names= namesInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //Create a request object
