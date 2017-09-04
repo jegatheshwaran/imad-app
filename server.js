@@ -102,10 +102,10 @@ app.get('/counter', function (req, res)
 });
 
 var names=[];
-app.get('/submit-names/:names',function (req,res){
+app.get('/submit-names',function (req,res){
     //URL: /submit-names?names=xxxx
     //get the name from request
-    var names = req.query.name;
+    var names = req.query.names;
    names.push(names);
    //JSON: Javascript object notation
    res.send(JSON.stringify(names));
