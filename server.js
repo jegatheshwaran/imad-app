@@ -152,11 +152,7 @@ app.get('/articles/:articlename', function (req, res) {
          }
      }
      });
-     });
-    var articlename = req.params.articlename;
-    res.send (createTemplate(articleData));
 });
-
 app.get('/ui/style.css.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
