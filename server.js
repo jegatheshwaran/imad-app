@@ -9,7 +9,8 @@ var config = {
     Database:'jegatheshwaran36',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:process.env.DB_PASSWORD,
+    password:process.env.DB_PASSWORD //environment variable to protect password
+    
 };
 
 var app=express();
