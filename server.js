@@ -108,11 +108,11 @@ var pool =new pool (config);
 app.get('/test-db', function (req, res) {
 // make a selrct request
 //return a response with the result
-pool.query('SELECT = FROM test',function(err,result){
+pool.query('SELECT * FROM test',function(err,result){
     if (err){
-        res.status(500).send(err.tostring());
+        res.status(500).send(err.tostringify());
     }else{
-        res.send(JSON.string(result));
+        res.send(JSON.string(result);
 
     }
 }
