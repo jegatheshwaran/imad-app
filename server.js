@@ -136,9 +136,23 @@ app.get('/submit-name',function (req,res){
    res.send(JSON.stringify(names));
 });  
 
-app.get('/:articlename', function (req, res) {
+app.get('/articles/:articlename', function (req, res) {
     //articleone ==article-one
     //article[articlename]={} content for article one
+     
+     pool.query(" select * from article where title = " + req.params.articlename,function(err,result){
+     if (err){
+         res.staus(500).send(err.tostring());
+     }else{
+         if (result.rows.length===0){
+             res.status(404).send('article not done');
+         }else{
+             var articledata= result.row[0];
+             res.send(createtemplate(articledata));
+         }
+     }
+     });
+     });
     var articlename = req.params.articlename;
     res.send(createTemplate(articles[articlename]));
 });
