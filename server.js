@@ -140,7 +140,8 @@ app.get('/articles/:articlename', function (req, res) {
     //articleone ==article-one
     //article[articlename]={} content for article one
      
-     pool.query(" select * from article where title = " + req.params.articlename,function(err,result){
+     //select * from article where title ='article-one'
+     pool.query(" select * from article where title = '" + req.params.articlename + "'",function(err,result){
      if (err){
          res.staus(500).send(err.tostring());
      }else{
