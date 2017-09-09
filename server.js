@@ -104,7 +104,7 @@ app.get('/ui/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var pool =new pool (config);
+var pool = new pool (config);
 app.get('/test-db', function (req, res) {
 // make a selrct request
 //return a response with the result
