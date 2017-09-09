@@ -94,6 +94,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/test-db', function (req, res) {
+// make a selrct request
+//return a response with the result
+});
+
+
 var counter = 0;
 app.get('/counter', function (req, res) 
 {
