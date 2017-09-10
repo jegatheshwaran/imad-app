@@ -89,7 +89,7 @@ var htmlTemplate=`
    ${heading}
 </h3>
 <div>
-   ${date}
+   ${date.todatestring()}
 </div>
 <div>
 ${content}
@@ -137,7 +137,7 @@ app.get('/submit-name',function (req,res){
 });  
 
 app.get('/articles/:articlename', function (req, res) {
-    //articleone ==article-one
+    //articlename==article-one
     //article[articlename]={} content for article one
      
      //select * from article where title ='article-one'
