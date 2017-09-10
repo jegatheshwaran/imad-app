@@ -140,8 +140,8 @@ app.get('/articles/:articlename', function (req, res) {
     //articlename==article-one
     //article[articlename]={} content for article one
      
-     //select * from article where title =''; DELETE WHERE a='asdf'
-     pool.query ("select * from article where title = '" + req.params.articlename + "'",function(err,result){
+     //select * from article where title ='\'; DELETE WHERE a= \'asdf'
+     pool.query ("select * from article where title = $1",[req.params.articlename],function(err,result){
      if (err){
          res.staus(500).send(err.tostring());
      }else{
