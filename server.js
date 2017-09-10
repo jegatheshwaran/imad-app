@@ -16,54 +16,6 @@ var config = {
 var app=express();
 app.use(morgan('combined'));
 
-var articles=
-{
- 'Article-one':{
-    title: 'hi i am jegatheshwaran madurai tamilnadu',
-    heading: 'Article one',
-    date: '10 aug',
-    content:
-    `<p>
-    i need to improve my skills
-   </p>
-    <p>
-    i need to improve my skills
-     </p>
-     <p>
-     this is article one
-     </p>`
-},
-'Article-two':{
-    title: 'hi i am jegatheshwaran madurai tamilnadu',
-    heading: 'Article two',
-    date: '28 aug',
-    content:
-    `<p>
-    i need to improve my skills
-   </p>
-    <p>
-    i need to improve my skills
-     </p>
-     <p>
-     this is article two
-     </p>`
-},
-'article-three':{
-  title: 'hi i am jegatheshwaran madurai tamilnadu',
-    heading: 'article three',
-    date: '22 aug',
-    content:
-    `<p>
-    i need to improve my skills 
-   </p>
-    <p>
-     i need to improve my skills
-     </p>
-     <p>
-     this is article three
-     </p>`
-},
-};
 
 function createTemplate(data){
     var title=data.title;
