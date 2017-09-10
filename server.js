@@ -105,7 +105,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var pool = new pool (config);
+var Pool=require('pg').Pool;
 app.get('/test-db', function (req, res) {
 // make a selrct request
 //return a response with the result
