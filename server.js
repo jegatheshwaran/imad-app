@@ -18,7 +18,9 @@ var config = {
 var app=express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.use(session({ sercet: 'someRandomsecretvalue',cookie:{makeAge: 1000 * 60 * 60 * 24 *30
+app.use(session({
+    sercet: 'someRandomsecretvalue',
+    cookie:{makeAge: 1000 * 60 * 60 * 24 *30
 }
 }));
 
@@ -108,13 +110,28 @@ app.post('/login',function(req,res){
                 var salt = dbstring.split('$')[z];
                 var hasehedpassword = hashed (password,salt); //creating a hash bashed on password submitted and the original salt
                 if (hashedpassword === dbstring){
+            
+            //set the session
+            req.session.auth= { userId: result.rows[0].id};
+            //set cookie with a sessionid
+            //internally, on server side,it mags session id to an object
+            //{auth:{userId}}
                     res.send('credentials correct!');
-                }else{
-                    res.send(403).send('username/password is invalid');                }
+                    }else{
+                    res.send(403).send('username/password is invalid');   
+                }
                 }
           }  
 
     });
+});
+
+app.get('/check-login', function(req.res){
+    if (req.session && req.session.auth && req.session.auth.userId){
+        res.send ('you are logged in:' + req.session.auth.userId.tostring());
+    }
+    else{ res.send('you are not logged in');
+    }
 });
 
 var Pool=require('pg').Pool;
