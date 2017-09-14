@@ -128,8 +128,8 @@ app.post('/login',function(req,res){
 
 app.get('/check-login', function(req,res)
 {
-    if (req.session && req.session.auth && req.session.auth.userId){
-        res.send ('you are logged in:' + req.session.auth.userId.tostring());
+    if (req.session && req.session.outh && req.session.outh.userId){
+        res.send ('you are logged in:' + req.session.outh.userId());
     }
     else{ res.send('you are not logged in');
     }
