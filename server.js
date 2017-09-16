@@ -81,7 +81,7 @@ app.post('/create-user',function(req,res){
     //JSON
     var username = req.body.username;
     var password = req.body.password;
-    var salt = crypto.RandomBytes(128).tostring('hex');
+    var salt = crypto.randomBytes(128).tostring('hex');
     dbstring = hash (password,salt);
     pool.query('INSERT INTO "user"(username,password)VALUES($1,$2)',[username,dbstring],function(err,result){
         if (err){
@@ -96,7 +96,7 @@ app.post('/create-user',function(req,res){
 app.post('/login',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-      pool.query('SELECT * FROM  "user"username = =$1',[username],function(err,result){
+      pool.query('SELECT * FROM "user"username = $1',[username],function(err,result){
         if (err){
             res.status(500).send(err.tostring());
         }
@@ -107,7 +107,7 @@ app.post('/login',function(req,res){
                 //match password
                 var dbstring = result.rows[0].password;
                 var salt = dbstring.split('$')[z];
-                var hasehedpassword = hashed (password,salt); //creating a hash bashed on password submitted and the original salt
+                var hashedpassword = hashed (password,salt); //creating a hash bashed on password submitted and the original salt
                 if (hashedpassword === dbstring){
             
             //set the session
@@ -177,7 +177,7 @@ app.get('/articles/:articlename', function (req, res) {
          if (result.rows.length===0){
              res.status(404).send('article not done');
          }else{
-             var articledata= result.row[0];
+               var articledata= result.rows[0];
              res.send(createtemplate(articledata));
          }
      }
