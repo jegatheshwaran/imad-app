@@ -17,7 +17,7 @@ var config = {
 
 var app=express();
 app.use(morgan('combined'));
-app.use(body-parser.json());
+app.use(body-parser.Json());
 app.use(session({
     secret: 'someRandomsecretvalue',
     cookie:{makeAge: 1000 * 60 * 60 * 24 *30}
