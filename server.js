@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg').pool;
+var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
@@ -17,7 +17,7 @@ var config = {
 
 var app=express();
 app.use(morgan('combined'));
-app.use(body-Parser.json());
+app.use(body-parser.json());
 app.use(session({
     secret: 'someRandomsecretvalue',
     cookie:{makeAge: 1000 * 60 * 60 * 24 *30}
@@ -98,7 +98,7 @@ app.post('/login',function(req,res){
     var password = req.body.password;
       pool.query('SELECT * FROM "user"username = $1',[username],function(err,result){
         if (err){
-            res.status(500).send(err.tostring());
+            res.status(500).send(err.toString());
         }
         else{
             if(result.rows.length ===0 ){
@@ -106,7 +106,7 @@ app.post('/login',function(req,res){
             }else{
                 //match password
                 var dbstring = result.rows[0].password;
-                var salt = dbstring.split('$')[z];
+                var salt = dbstring.split('$')[2];
                 
                 var hashedpassword = hashed (password,salt);//creating a hash bashed on password submitted and the original salt
                 if (hashedpassword === dbstring){
@@ -135,7 +135,7 @@ res.send ('you are logged in:' + req.session.auth.userId());
     }
 });
 
-var Pool=require('pg').Pool;
+
 app.get('/test-db', function (req, res) {
 // make a selrct request
 //return a response with the result
