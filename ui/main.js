@@ -13,7 +13,7 @@ submit.onclick = function(){
             if (request.status === 200){
             
                 alert('log in success');
-            } else if (request.status === 405 ){
+            } else if (request.status === 403 ){
                 alert('invalid user');
             } else if (request.status === 500){
                 alert('Something is wrong with the server');
