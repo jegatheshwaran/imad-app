@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var pool = require('pg').pool;
 var crypto = require('crypto');
-var bodyParser = require('body-Parser');
+var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var config = {
