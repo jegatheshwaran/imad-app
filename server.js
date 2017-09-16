@@ -67,7 +67,7 @@ app.get('/', function (req, res) {
 function hash(input,salt){
     //how do we create a hash?
     var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-    return ["pbkdf2","10000",salt,hashed.tostring('hex')].join('$');
+      return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
 }
 
 app.get('/hash/:input', function (req, res) {
@@ -107,7 +107,8 @@ app.post('/login',function(req,res){
                 //match password
                 var dbstring = result.rows[0].password;
                 var salt = dbstring.split('$')[z];
-                var hashedpassword = hashed (password,salt); //creating a hash bashed on password submitted and the original salt
+                
+                var hashedpassword = hashed (password,salt);//creating a hash bashed on password submitted and the original salt
                 if (hashedpassword === dbstring){
             
             //set the session
@@ -127,9 +128,9 @@ app.post('/login',function(req,res){
 
 app.get('/check-login', function(req,res)
 {
-    if (req.session && req.session.outh && req.session.outh.userId){
-        res.send ('you are logged in:' + req.session.outh.userId());
-    }
+    if (req.session && req.session.auth && req.session.auth.userId) { 
+res.send ('you are logged in:' + req.session.auth.userId());
+        }
     else{ res.send('you are not logged in');
     }
 });
