@@ -81,11 +81,11 @@ app.post('/create-user',function(req,res){
     //JSON
     var username = req.body.username;
     var password = req.body.password;
-    var salt = crypto.randomBytes(128).tostring('hex');
+    var salt = crypto.randomBytes(128).toString('hex');
     dbstring = hash (password,salt);
     pool.query('INSERT INTO "user"(username,password)VALUES($1,$2)',[username,dbstring],function(err,result){
         if (err){
-            res.status(500).send(err.tostring());
+            res.status(500).send(err.toString());
         }
         else{
             res.send('user successfully created:' + username);
@@ -141,7 +141,7 @@ app.get('/test-db', function (req, res) {
 //return a response with the result
 pool.query('SELECT * FROM test',function(err,result){
     if (err){
-        res.status(500).send(err.tostring());
+        res.status(500).send(err.toString());
     }else{
         res.send(JSON.stringify(result.rows));
     }
@@ -153,7 +153,7 @@ var counter = 0;
 app.get('/counter', function (req, res) 
 {
   counter = counter+1;
-  res.send(counter.tostring());
+  res.send(counter.toString());
 });
 
 var names=[];
@@ -173,7 +173,7 @@ app.get('/articles/:articlename', function (req, res) {
      //select * from article where title ='\'; DELETE WHERE a= \'asdf'
      pool.query ("select * from article where title = $1",[req.params.articlename],function(err,result){
      if (err){
-         res.staus(500).send(err.tostring());
+         res.staus(500).send(err.toString());
      }else{
          if (result.rows.length===0){
              res.status(404).send('article not done');
