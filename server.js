@@ -135,7 +135,7 @@ res.send ('you are logged in:' + req.session.auth.userId());
     }
 });
 
-
+var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
 // make a selrct request
 //return a response with the result
